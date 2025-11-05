@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-function App() {
+// UI root (pages/widgets bo'lmagani uchun hozircha sodda).
+// Keyinchalik Router qo'shsak, bu yerga <Router> bilan joylaymiz.
+import { Counter } from './entities/counter/ui';
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+   return (
+      <main style={{ padding: 20, fontFamily: 'sans-serif' }}>
+         <h1 style={{ marginTop: 0 }}>
+            React + TypeScript + Effector (FSD minimal)
+         </h1>
+         <p style={{ marginTop: 0, opacity: 0.8 }}>
+            Komponent faqat <b>event</b> chaqiradi, state esa <b>model</b>da.
+         </p>
+
+         <Counter />
+      </main>
+   );
 }
-
-export default App;
